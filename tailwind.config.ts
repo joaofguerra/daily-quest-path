@@ -61,7 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// LevelUp Life specific colors
+				critical: 'hsl(var(--critical))',
+				important: 'hsl(var(--important))',
+				normal: 'hsl(var(--normal))',
+				optional: 'hsl(var(--optional))',
+				xp: {
+					DEFAULT: 'hsl(var(--xp-primary))',
+					glow: 'hsl(var(--xp-glow))'
+				},
+				'level-up': 'hsl(var(--level-up))',
+				combo: 'hsl(var(--combo-active))',
+				streak: 'hsl(var(--streak-flame))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'xp-flow': {
+					'0%': { transform: 'translateY(0px) scale(1)', opacity: '0' },
+					'50%': { transform: 'translateY(-20px) scale(1.2)', opacity: '1' },
+					'100%': { transform: 'translateY(-60px) scale(0.8)', opacity: '0' }
+				},
+				'crystal-shine': {
+					'0%': { transform: 'scale(1) rotate(0deg)', filter: 'brightness(1)' },
+					'50%': { transform: 'scale(1.1) rotate(180deg)', filter: 'brightness(1.3)' },
+					'100%': { transform: 'scale(1) rotate(360deg)', filter: 'brightness(1)' }
+				},
+				'magical-pulse': {
+					'0%, 100%': { transform: 'scale(1)', opacity: '0.8' },
+					'50%': { transform: 'scale(1.05)', opacity: '1' }
+				},
+				'trail-advance': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0%)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'xp-flow': 'xp-flow 2s ease-out',
+				'crystal-shine': 'crystal-shine 2s ease-in-out infinite',
+				'magical-pulse': 'magical-pulse 2s ease-in-out infinite',
+				'trail-advance': 'trail-advance 0.8s ease-out'
+			},
+			backgroundImage: {
+				'gradient-enchanted': 'var(--gradient-enchanted)',
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-xp': 'var(--gradient-xp)'
 			}
 		}
 	},
